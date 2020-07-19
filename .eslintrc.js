@@ -78,6 +78,33 @@ module.exports = {
         },
       ],
       "@calm/react-intl/missing-values": 2,
-      }
+      },
+      overrides: [
+        {
+          files: ["*.story.tsx", "*.test.tsx", "*.test.tsx.snap"],
+          rules: {
+            "@calm/react-intl/missing-formatted-message": [
+              0,
+              {
+                noTrailingWhitespace: false,
+                ignoreLinks: true,
+                enforceLabels: false,
+                enforceImageAlts: false,
+                enforceInputProps: false,
+              },
+            ],
+            "@calm/react-intl/missing-attribute": [
+              0,
+              {
+                noTrailingWhitespace: false,
+                noSpreadOperator: false,
+                requireDescription: false,
+                formatDefineMessages: false,
+              },
+            ],
+            "@calm/react-intl/missing-values": 0,
+          },
+        },
+      ],
   };
  
